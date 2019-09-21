@@ -33,6 +33,8 @@ public class encrypt {
 		// switches first with third and fourth with second 
 		finalNum = third * 1000 + fourth * 100 + first * 10 + second;
 		System.out.println("Encrypted number: " + finalNum);
+		
+		scnr.close();
 	}
 
 }

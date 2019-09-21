@@ -29,7 +29,9 @@ public class decrypt {
 		// computes last second level round of encryption 
 		// switches first with third and fourth with second 
 		finalVal = third * 1000 + fourth * 100 + first * 10 + second; 
-		System.out.println("Decrypted number: " + finalVal); 
+		System.out.println("Decrypted number: " + finalVal);
+		
+		scnr.close();
 
 	}
 
