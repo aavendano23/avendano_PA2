@@ -10,17 +10,19 @@ public class BMIcalculator {
 		double weight; 
 		double height;
 		
+		// ask user if they want to use kg & cm or lbs & in 
 		System.out.println("BMI (Body Mass Index) Calculator"); 
 		System.out.println("What measuring system would you like to use?\n (1) Meteric\n (2) US standard"); 
 		choice = scnr.nextInt(); 
 		 
+		// ask user to input height and weight using measurement they chose
 		if (choice == 1) {
 			System.out.println("Please enter your weight in kilograms: ");
 			weight = scnr.nextDouble();
 			System.out.println("Please enter your height in centimeters: ");
 			height = scnr.nextDouble();
+			// calculate bmi with meteric system
 			bmi = weight / Math.pow(height, 2);
-			//System.out.println("Your BMI is: " + bmi);
 		}
 
 		if (choice == 2) {
@@ -28,10 +30,11 @@ public class BMIcalculator {
 			weight = scnr.nextDouble();
 			System.out.println("Please enter your height in inches: ");
 			height = scnr.nextDouble();
+			// calculate bmi with US standard system
 			bmi = 703 * weight / Math.pow(height, 2);
-			//System.out.printf("Your BMI is: %.2d", bmi);
 		}
 		
+		// displays bmi and categorizes user based on bmi
 		System.out.printf("Your BMI is: %.2f\n", bmi);		 
 		
 		if (bmi < 18.5) {
