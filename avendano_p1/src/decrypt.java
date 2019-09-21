@@ -11,6 +11,7 @@ public class decrypt {
 		int finalVal;
 		int userNum;
 		
+		// ask user for input
 		System.out.println("Enter 4 digit number to decrypt: ");
 		userNum = scnr.nextInt();
 		 
@@ -19,7 +20,6 @@ public class decrypt {
 		second = (userNum / 100) % 10; 
 		third = (userNum / 10) % 10; 
 		fourth = userNum % 10; 
-		//System.out.println("first " + first + " second " + second + " third " + third + " fourth " + fourth); 
 
 		// decrypts first level of encryption 
 		first = first - 7 + ((first <= 6) ? 10 : 0); 

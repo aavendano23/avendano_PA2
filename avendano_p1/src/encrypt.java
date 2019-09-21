@@ -12,6 +12,7 @@ public class encrypt {
 		int finalNum;
 		int userNum;
 		
+		// ask user for input
 		System.out.println("Enter a 4-digit number: "); 
 		userNum = scnr.nextInt();
 
@@ -20,7 +21,6 @@ public class encrypt {
 		second = (userNum / 100) % 10; 
 		third = (userNum / 10) % 10; 
 		fourth = userNum % 10;
-		//System.out.println("first " + first + " second " + second + " third " + third + " fourth " + fourth); 
 		 
 		// computes first level of encryption 
 		first = (first + 7) % 10; 
