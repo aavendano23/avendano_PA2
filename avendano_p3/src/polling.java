@@ -6,11 +6,11 @@ public class polling {
 		Scanner scnr = new Scanner(System.in);
 		int[][] poll = new int[5][10]; 
 		String[] topics = {"Gender Equality", "Quality Education", "Zero Hunger", "Clean Water", "Climate Action"}; 
-		int i, userRate;
+		int i, userRate, j;
 		final int NUM_TOPICS = 5;
 		int counter = 0;
 		
-		System.out.println("Please rate the 5 topics 1 through 10. 1 being the least important and 10 being the most important");
+		System.out.println("Please rate the 5 topics 1 through 10. 1 being the least important and 10 being the most important\n");
 		
 		while(true) {
 			
@@ -40,17 +40,13 @@ public class polling {
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------"); 
 
 		 
-		/*for (i = 0; i < 5; i++) {
-			System.out.printf("%s%-15s", topic, "");
-			for (j = 0; j <= i; i++) {
+		for (i = 0; i < 5; i++) {
+			System.out.printf("%s%-15s", topics[i], "");
+			for (j = 0; j < 10 ; i++) {
 				System.out.printf("%d%-8s", poll[i][j], "");
 			}
-		}*/
-
-
-
-	
-
+		}
+		
 	}
 
 }
