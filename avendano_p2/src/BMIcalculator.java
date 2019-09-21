@@ -46,6 +46,8 @@ public class BMIcalculator {
 		else { 
 			System.out.println("Obesity");
 		}
+		
+		scnr.close();
 
 	}
 
