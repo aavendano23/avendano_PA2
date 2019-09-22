@@ -5,7 +5,7 @@ public class BMIcalculator {
 	public static void main(String[] args) {
 		Scanner scnr = new Scanner(System.in); 
 
-		double bmi = 0; 
+		double bmi = 0.0; 
 		int choice; 
 		double weight; 
 		double height;
@@ -19,8 +19,9 @@ public class BMIcalculator {
 		if (choice == 1) {
 			System.out.println("Please enter your weight in kilograms: ");
 			weight = scnr.nextDouble();
-			System.out.println("Please enter your height in centimeters: ");
+			System.out.println("Please enter your height in meters: ");
 			height = scnr.nextDouble();
+			//System.out.print(height);
 			// calculate bmi with meteric system
 			bmi = weight / Math.pow(height, 2);
 		}
@@ -35,20 +36,11 @@ public class BMIcalculator {
 		}
 		
 		// displays bmi and categorizes user based on bmi
-		System.out.printf("Your BMI is: %.2f\n", bmi);		 
-		
-		if (bmi < 18.5) {
-			System.out.println("Underweight");
-		}
-		else if (bmi <24.9) {
-			System.out.println("Normal weight");
-		}
-		else if (bmi < 29.9) { 
-			System.out.println("Overweight"); 
-		}
-		else { 
-			System.out.println("Obesity");
-		}
+		System.out.printf("Your BMI is: %.1f\n", bmi);
+		System.out.println("Underweight = < 18.5");
+		System.out.println("Normal weight = 18.5 - 24.9");
+		System.out.println("Overweight 25 - 29.9");
+		System.out.println("Obesity = BMI of 30 or greater");
 		
 		scnr.close();
 
